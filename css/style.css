@@ -1,24 +1,28 @@
 body {
-    margin: 0;
-    padding: 0;
+    background: #ffffff;
+    color: #000000;
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
-    line-height: 24px;
     font-weight: 700;
-    color: #000000;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
     text-transform: uppercase;
-    background: #f2f2f2;
 }
 
 a {
     text-decoration: none;
 }
 
+.visually-hidden {
+    display: none;
+}
+
 .site-navigation {
-    color: #000000;
     background-color: #ffffff;
-    list-style: none;
+    color: #000000;
     font-weight: 800;
+    list-style: none;
 }
 
 .site-navigation a {
@@ -26,43 +30,269 @@ a {
 }
 
 .site-navigation a:hover {
-    color:#81b3d2;
+    color: #81b3d2;
 }
+
 .site-navigation a:active {
-    color:#818181;
+    color: #818181;
 }
-
-.welcoming-banner {
-    background-image: url(../img/background_photo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 510px;
-    }
-
+/* Стилизация главного меню конец */
+/* Стилизация информационных блоков на главной странице начало */
 .element-reason {
+    line-height: 21px;
     text-align: center;
 }
 
-.element-reason h3{
+.element-reason h3 {
     font-size: 21px;
     font-weight: 700;
 }
 
-.element-reason p{
+.element-reason p {
     font-size: 14px;
 }
 
 .block-reason {
     background-color: #81b3d2;
-    color: ffffff;
-    }
+    color: #ffffff;
+    line-height: 21px;
+    text-align: center;
+}
+
+.block-reason h3 {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.block-reason p {
+    font-size: 14px;
+}
+/* Стилизация информационных блоков на главной странице конец */
+/* Стилизация блока "Заинтересовались?" начало */
+.sentence {
+    text-align: center;
+}
 
 .sentence b {
-    font-size: 21px;
+    font-size: 30px;
+    line-height: 36px;
 }
 
 .sentence p {
     font-size: 14px;
-
+    line-height: 24px;
 }
+
+.sentence-button {
+    background-color: #766357;
+    color: #ffffff;
+}
+
+.sentence-button:hover {
+    background-color: #604e43;
+}
+
+.sentence-button:active {
+    background-color: #503e33;
+    color: #857871;
+}
+/* Стилизация блока "Заинтересовались?" конец */
+/* Стилизация формы поиска и бронирования начало */
+.calendar-icon {
+    background: #f2f2f2;
+}
+
+.calendar-icon svg:hover path {
+    fill: #000000;
+}
+
+.calendar-icon svg:active path {
+    fill: #81b3d2;
+}
+
+.sentence-form label {
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.sentence-search-date input {
+    background-color: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.sentence-search-date input:hover {
+    background-color: #ebebeb;
+    border: 2px solid #ebebeb;
+}
+
+.sentence-search-date input:focus {
+    background-color: #ffffff;
+    border: 2px solid #ebebeb;
+}
+
+.sentence-search-date input::-webkit-input-placeholder {
+    color: #000000;
+}
+
+.sentence-search-date input::-moz-placeholder {
+    color: #000000;
+}
+
+.number-residents button {
+    background-color: #f2f2f2;
+    border: 0;
+    color: #a9a9a9;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.number-residents button:hover {
+    color: #000000;
+}
+
+.number-residents button:active {
+    color: #81b3d2;
+}
+
+.number-residents input {
+    background-color: #f2f2f2;
+    border: 0px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.number-residents input::-webkit-input-placeholder {
+    color: #000000;
+}
+
+.number-residents input::-moz-placeholder {
+    color: #000000;
+}
+
+.search-button {
+    background-color: #81b3d2;
+    border: 0px;
+    color: #ffffff;
+    font: inherit;
+}
+
+.search-button:hover {
+    background-color: #669ec0;
+}
+
+.search-button:active {
+    background-color: #5496bd;
+    color: #88b6d1;
+}
+/* Стилизация формы поиска и бронирования конец */
+/* Стилизация списка отелей на второй странице начало */
+.hotel-list {
+    list-style: none;
+}
+
+.hotel{
+    font-size: 14px;
+    line-height: 21px;
+    list-style: none;
+}
+
+.hotel h2 {
+    color: #000000;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.hotel h2:hover {
+    color: #81b3d2;
+}
+
+.hotel h2:active {
+    color: #b2b2b2;
+}
+
+.hotel .hotel-more {
+    background-color: #81b3d2;
+    color: #ffffff;
+    text-align: center;
+}
+
+.hotel .hotel-more:hover {
+    background-color: #669ec0;
+}
+
+.hotel .hotel-more:active {
+    background-color: #5496bd;
+    color: #88b6d1;
+}
+
+.hotel .hotel-booking {
+    background-color: #766357;
+    color: #ffffff;
+    text-align: center;
+}
+
+.hotel .hotel-booking:hover {
+    background-color: #604e43;
+}
+
+.hotel .hotel-booking:active {
+    background-color: #503e33;
+    color: #857871;
+}
+
+.hotel-rating {
+    background-color: #f2f2f2;
+    color: #6f6f6f;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+/* Стилизация списка отелей на второй странице конец */
+/* Стилизация футера начало */
+.footer-hashtag {
+    color: #000000;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 26px;
+}
+
+.social-icon li {
+    background-color: #81b3d2;
+    list-style: none;
+}
+
+.social-icon li:hover {
+    background-color: #669ec0;
+}
+
+.social-icon li:active {
+    background-color: #5496bd;
+}
+
+.social-icon li:active svg path {
+    fill: #88b6d1;
+}
+
+.html-academy a:hover svg path {
+    fill: #81b3d2;
+}
+
+.html-academy a:active svg path {
+    fill: #bdbbbc;
+}
+
+/* Стилизация футера конец */
