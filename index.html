@@ -4,32 +4,36 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-</head>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  </head>
 
 <body>
   <header>
-    <a href="index.html">
+    <a class="main-header-logo" href="index.html">
       <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип города Седона">
     </a>
-    <nav>
-      <ul>
+    <nav class="main-navigation">
+      <ul class="site-navigation">
         <li>
-          <a href="#">Информация</a>
+          <a class="menu-item" href="#">Информация</a>
         </li>
         <li>
-          <a href="#">Фото и видео</a>
+          <a class="menu-item" href="#">Фото и видео</a>
         </li>
         <li>
-          <a href="#">Карта штата</a>
+          <a class="menu-item" href="#">Карта штата</a>
         </li>
         <li>
-          <a href="catalog.html">Гостиницы</a>
+          <a class="menu-item" href="catalog.html">Гостиницы</a>
         </li>
       </ul>
     </nav>
   </header>
   <main>
     <h1 class="visually-hidden">Город курорт Седона</h1>
+    <div class="welcoming-banner"></div>
     <div>
       <b>Седона небольшой городок в аризоне,<br>
         заслуживающий большего!</b>
@@ -37,43 +41,41 @@
     </div>
     <section>
       <h2 class="visually-hidden">Причины, по которым Вам следует посетить Седону</h2>
-      <div>
+      <div class="element-reason block-reason">
         <h3>Настоящий городок</h3>
-        <p class="visually-hidden">Причина</p>
         <p>- №1 -</p>
         <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
       </div>
-      <div>
+      <div class="element-reason">
         <h3>Жилье</h3>
         <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
       </div>
-      <div>
+      <div class="element-reason">
         <h3>Еда</h3>
         <p>Всегда, заказывайте фирменный бургер, Вы не разочаруетесь!</p>
       </div>
-      <div>
+      <div class="element-reason">
         <h3>Сувениры</h3>
         <p>Не только китайского, но и местного производства!</p>
       </div>
-      <div>
+      <div class="element-reason block-reason">
         <h3>Там есть Мост Дьявола</h3>
-        <p class="visually-hidden">Причина</p>
         <p>— №2 —</p>
         <p>Да, по нему можно пройтись! Если конечно Вы осмелитесь</p>
       </div>
-      <div>
+      <div class="element-reason">
         <h3>Небольшая площадь</h3>
         <p class="visually-hidden">Причина</p>
         <p>— №3 —</p>
         <p>Все достопримечательности находятся очень близко</p>
       </div>
-      <div>
+      <div class="element-reason">
         <h3>Красивая дорога</h3>
         <p class="visually-hidden">Причина</p>
         <p>— №4 —</p>
         <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
       </div>
-      <div>
+      <div class="element-reason">
         <h3>Мало туристов</h3>
         <p class="visually-hidden">Причина</p>
         <p>— №5 —</p>
@@ -81,7 +83,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="sentence">
       <h2 class="visually-hidden">Поиск и бронирование гостинницы в Седоне</h2>
       <b>Заинтересовались?</b>
       <p>Укажите предполагаемые даты поездки,<br>
@@ -98,15 +100,15 @@
         </div>
         <label for="adults">Взрослые:</label>
         <div>
-          <button type="button">Уменьшить количество проживающих взрослых на одного</button>
+          <button type="button">-</button>
           <input type="number" name="number-adults" id="adults" placeholder="2">
-          <button type="button">Увеличить количество проживающих взрослых на одного</button>
+          <button type="button">+</button>
         </div>
         <label for="kids">Дети:</label>
         <div>
-          <button type="button">Уменьшить количество проживающих детей на одного</button>
+          <button type="button">-</button>
           <input type="number" name="number-kids" id="kids" placeholder="1">
-          <button type="button">Увеличить количество проживающих детей на одного</button>
+          <button type="button">+</button>
         </div>
         <button type="submit">Найти</button>
       </form>
@@ -114,9 +116,12 @@
     <footer>
       <a href="#">#visitsedona</a>
       <ul>
-        <li><a href="#"><img src="img/twitter.svg" width="17" height="15" alt="Twitter" title="Блог города Седона в Twitter"></a></li>
-        <li><a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="Facebook" title="Страница города Седона в Facebook"></a></li>
-        <li><a href="#"><img src="img/youtube.svg" width="20" height="16" alt="Facebook" title="Канал города седона на YouTube"></a></li>
+        <li><a href="#"><img src="img/twitter.svg" width="17" height="15" alt="Twitter"
+              title="Блог города Седона в Twitter"></a></li>
+        <li><a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="Facebook"
+              title="Страница города Седона в Facebook"></a></li>
+        <li><a href="#"><img src="img/youtube.svg" width="20" height="16" alt="YouTube"
+              title="Канал города седона на YouTube"></a></li>
       </ul>
       <p>
         <b>Website</b>
