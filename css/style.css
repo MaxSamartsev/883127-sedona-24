@@ -1,10 +1,10 @@
 body {
-    background: #ffffff;
+    background: #f2f2f2;
     color: #000000;
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
-    font-weight: 700;
-    line-height: 24px;
+    font-weight: 400;
+    line-height: 21px;
     margin: 0;
     padding: 0;
     text-transform: uppercase;
@@ -18,26 +18,49 @@ a {
     display: none;
 }
 
+.main-container {
+    position: relative;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
+    background-color: #fff;
+}
+
+.header-line {
+    position: relative;
+    padding-left: 72px;
+    padding-right: 72px;
+}
+
 .site-navigation {
-    background-color: #ffffff;
-    color: #000000;
-    font-weight: 800;
     list-style: none;
 }
 
-.site-navigation a {
+.site-navigation li {
+	font-weight: 700;
+}
+
+.selected-page {
+    color: #766357;
+}
+
+.other-pages {
     color: #000000;
 }
 
-.site-navigation a:hover {
+.other-pages:hover {
     color: #81b3d2;
 }
 
-.site-navigation a:active {
+.other-pages:active {
     color: #818181;
 }
+
 /* Стилизация главного меню конец */
+
 /* Стилизация информационных блоков на главной странице начало */
+
 .element-reason {
     line-height: 21px;
     text-align: center;
@@ -67,8 +90,11 @@ a {
 .block-reason p {
     font-size: 14px;
 }
+
 /* Стилизация информационных блоков на главной странице конец */
+
 /* Стилизация блока "Заинтересовались?" начало */
+
 .sentence {
     text-align: center;
 }
@@ -96,17 +122,20 @@ a {
     background-color: #503e33;
     color: #857871;
 }
+
 /* Стилизация блока "Заинтересовались?" конец */
+
 /* Стилизация формы поиска и бронирования начало */
+
 .calendar-icon {
     background: #f2f2f2;
 }
 
-.calendar-icon svg:hover path {
+.calendar-icon:hover path {
     fill: #000000;
 }
 
-.calendar-icon svg:active path {
+.calendar-icon:active path {
     fill: #81b3d2;
 }
 
@@ -196,13 +225,85 @@ a {
     background-color: #5496bd;
     color: #88b6d1;
 }
+
 /* Стилизация формы поиска и бронирования конец */
+/* Стилизация формы ввода параметров на странице catalog начало */
+.selection-hotel {
+background-color: #789ec2;
+}
+
+.selection-hotel-legend {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #ffffff;  
+    border: none;
+}
+.selection-hotel-parameter li{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #ffffff;   
+    list-style: none;
+}
+
+.selection-price-title {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #ffffff;   
+}
+
+.selection-price-number{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #ffffff;   
+}
+
+.selection-price-number input{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #ffffff;   
+    background-color: transparent;
+    border: 0px;
+}
+
+.selection-price-number input::-webkit-input-placeholder {
+    color: #ffffff; 
+    background-color: transparent;
+}
+
+.selection-price-number input::-moz-placeholder {
+    color: #ffffff; 
+    background-color: transparent;
+}
+
+.selection-button {
+    font: inherit;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    border: 0px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: transparent;
+    }
+
+.selection-button:hover {
+    color: #000000;
+    background-color: #ffffff;
+} 
+/* Стилизация формы ввода параметров на странице catalog конец */
+
 /* Стилизация списка отелей на второй странице начало */
+
 .hotel-list {
     list-style: none;
 }
 
-.hotel{
+.hotel {
     font-size: 14px;
     line-height: 21px;
     list-style: none;
@@ -261,8 +362,11 @@ a {
     line-height: 24px;
     text-align: center;
 }
+
 /* Стилизация списка отелей на второй странице конец */
+
 /* Стилизация футера начало */
+
 .footer-hashtag {
     color: #000000;
     font-size: 21px;
@@ -270,28 +374,31 @@ a {
     line-height: 26px;
 }
 
-.social-icon li {
-    background-color: #81b3d2;
+.soc-icon-row {
     list-style: none;
 }
 
-.social-icon li:hover {
+.social-icon {
+    background-color: #81b3d2;
+}
+
+.social-icon:hover {
     background-color: #669ec0;
 }
 
-.social-icon li:active {
+.social-icon:active {
     background-color: #5496bd;
 }
 
-.social-icon li:active svg path {
+.social-icon:active path {
     fill: #88b6d1;
 }
 
-.html-academy a:hover svg path {
+.html-academy-icon:hover path {
     fill: #81b3d2;
 }
 
-.html-academy a:active svg path {
+.html-academy-icon:active path {
     fill: #bdbbbc;
 }
 
