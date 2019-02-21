@@ -11,37 +11,32 @@
 
 <body>
   <div class="main-container">
-    <header class="header-container">
-      <div class="header-line">
-          <a class="header-logo" href="index.html" title="Перейти на главную страницу">
-              <img src="img/logo-sedona.svg" width="138" height="71" alt="Логотип города Седона">
-            </a>
-        <nav class="header-nav">
-            <ul class="site-navigation">
-            <li>
-              <a class="selected-page" href="index.html">Информация</a>
-            </li>
-            <li>
-              <a class="other-pages" href="#">Фото и видео</a>
-            </li>
-            <div class="nav-stub"> </div>
-            <li>
-              <a class="other-pages" href="#">Карта штата</a>
-            </li>
-            <li>
-              <a class="other-pages" href="catalog.html">Гостиницы</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
+    <header class="header-line">
+      <a class="header-logo" href="index.html" title="Перейти на главную страницу">
+        <img src="img/logo-sedona.svg" width="138" height="71" alt="Логотип города Седона">
+      </a>
+      <nav class="header-nav">
+        <ul class="site-navigation">
+          <li class="menu-item selected-page">
+            <a href="index.html">Информация</a>
+          </li>
+          <li class="menu-item other-pages">
+            <a href="#">Фото и видео</a>
+          </li>
+          <li class="menu-item other-pages">
+            <a href="#">Карта штата</a>
+          </li>
+          <li class="menu-item other-pages">
+            <a href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
       <h1 class="visually-hidden">Город курорт Седона</h1>
       <div class="welcoming-banner"></div>
-
-      <div>
-        <b>Седона небольшой городок в аризоне,<br>
+      <div class="main-promo-text">
+        <b>Седона — небольшой городок в аризоне,<br>
           заслуживающий большего!</b>
         <p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
       </div>
@@ -71,19 +66,16 @@
         </div>
         <div class="element-reason">
           <h3>Небольшая площадь</h3>
-          <p class="visually-hidden">Причина</p>
           <p>— №3 —</p>
           <p>Все достопримечательности находятся очень близко</p>
         </div>
         <div class="element-reason">
           <h3>Красивая дорога</h3>
-          <p class="visually-hidden">Причина</p>
           <p>— №4 —</p>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </div>
         <div class="element-reason">
           <h3>Мало туристов</h3>
-          <p class="visually-hidden">Причина</p>
           <p>— №5 —</p>
           <p>Большинство едет в Гранд Каньон и толпится там</p>
         </div>
@@ -91,13 +83,18 @@
 
       <section class="sentence">
         <h2 class="visually-hidden">Поиск и бронирование гостинницы в Седоне</h2>
+        <div class="sentence-text">
         <b>Заинтересовались?</b>
         <p>Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        </div>
         <a class="sentence-button" href="#">Поиск гостиницы в седоне</a>
-        <form class="sentence-form" method="POST" action="https://echo.htmlacademy.ru">
-          <div class="sentence-search-date">
-            <label>Дата заезда:<input type="text" name="arrival-date" placeholder="24 Апреля 2017"></label>
+        </section>
+        <form class="sentence" method="POST" action="https://echo.htmlacademy.ru">
+          <div class="sentence-block">
+          <div class="sentence-date">
+            <label for="date-in">Дата заезда:</label>
+            <input type="text" id="date-in" name="arrival-date" placeholder="24 Апреля 2017">
             <a href="#" title="Открыть календарь"><svg class="calendar-icon" xmlns="http://www.w3.org/2000/svg"
                 width="21" height="22" viewBox="0 0 21 22">
                 <path fill="#cdcdcd"
@@ -108,8 +105,9 @@
                 </path>
               </svg></a>
           </div>
-          <div class="sentence-search-date">
-            <label>Дата выезда:<input type="text" name="date-departure" placeholder="4 Июня 2017"></label>
+          <div class="sentence-date">
+            <label for="date-out">Дата выезда:</label>
+            <input type="text" id="date-out" name="date-departure" placeholder="4 Июня 2017">
             <a href="#" title="Открыть календарь"><svg class="calendar-icon" xmlns="http://www.w3.org/2000/svg"
                 width="21" height="22" viewBox="0 0 21 22">
                 <path fill="#cdcdcd"
@@ -120,21 +118,28 @@
                 </path>
               </svg></a>
           </div>
+          <div class="sentence-adults">
           <label for="adults">Взрослые:</label>
-          <div class="number-residents">
+          <div class="sentence-number">
             <button type="button">-</button>
             <input type="text" name="number-adults" id="adults" placeholder="2">
             <button type="button">+</button>
           </div>
+        </div>
+        <div class="sentence-kids">
           <label for="kids">Дети:</label>
-          <div class="number-residents">
+          <div class="sentence-number">
             <button type="button">-</button>
             <input type="text" name="number-kids" id="kids" placeholder="1">
             <button type="button">+</button>
           </div>
           <button class="search-button" type="submit">Найти</button>
+          </div>
+        </div>
         </form>
-      </section>
+        <div class="map-sedona">
+        </div>
+      
     </main>
     <footer class="main-footer">
       <a class="footer-hashtag" href="#">#visitsedona</a>
@@ -171,7 +176,6 @@
         </a>
       </div>
     </footer>
-  </div>
 </body>
 
 </html>

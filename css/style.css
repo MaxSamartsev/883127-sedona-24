@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     background: #f2f2f2;
     color: #000000;
@@ -15,41 +23,82 @@ a {
 }
 
 .visually-hidden {
-    display: none;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 
 .main-container {
     position: relative;
-    max-width: 1200px;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
     background-color: #fff;
 }
 
+/* Стилизация главного меню и логотипа начало */
+
 .header-line {
-    position: relative;
     padding-left: 72px;
     padding-right: 72px;
+    max-height: 56px;
+}
+
+.header-logo {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
 }
 
 .site-navigation {
     list-style: none;
+    margin: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
 }
 
-.site-navigation li {
-	font-weight: 700;
+.menu-item {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 26px;
+    width: 22.7272727273%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-.selected-page {
+.menu-item:nth-of-type(1) {
+    padding-right: 40px;
+}
+
+.menu-item:nth-of-type(2) {
+    padding-right: 40px;
+}
+
+.menu-item:nth-of-type(3) {
+    margin-left: 93px;
+    padding-left: 40px;
+    text-align: right;
+}
+
+.menu-item:nth-of-type(4) {
+    padding-left: 40px;
+    text-align: right;
+}
+
+.selected-page a {
     color: #766357;
 }
 
-.other-pages {
+.other-pages a {
     color: #000000;
 }
 
-.other-pages:hover {
+.other-pages:hover a {
     color: #81b3d2;
 }
 
@@ -57,13 +106,45 @@ a {
     color: #818181;
 }
 
-/* Стилизация главного меню конец */
+/* Стилизация главного меню и логотипа конец */
+
+/* Стилизация баннера на главной странице начало */
+
+.welcoming-banner {
+    background: #c0d6e4 url("../img/sedona-logo.jpg") no-repeat center;
+    width: 100%;
+    height: 510px;
+    background-size: cover;
+}
+
+/* Стилизация баннера на главной странице конец */
 
 /* Стилизация информационных блоков на главной странице начало */
+
+.main-promo-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 61px;
+    color: #000000;
+    line-height: 21px;
+    margin-bottom: 52px;
+}
+
+.main-promo-text b {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.main-promo-text p {
+    margin-top: 32px;
+}
 
 .element-reason {
     line-height: 21px;
     text-align: center;
+    background-color: #eeeeee;
+    margin: 0;
 }
 
 .element-reason h3 {
@@ -73,6 +154,7 @@ a {
 
 .element-reason p {
     font-size: 14px;
+    margin: 0;
 }
 
 .block-reason {
@@ -96,22 +178,40 @@ a {
 /* Стилизация блока "Заинтересовались?" начало */
 
 .sentence {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-.sentence b {
+.sentence-text {
+    padding-top: 51px;
+    padding-bottom: 48px;
+    width: 440px;
+    height: 100%;
+}
+
+.sentence-text b {
     font-size: 30px;
     line-height: 36px;
 }
 
-.sentence p {
+.sentence-text p {
     font-size: 14px;
     line-height: 24px;
+    margin: 0;
+    padding-top: 22px;
 }
 
 .sentence-button {
+    width: 568px;
+    padding-top: 29px;
+    padding-bottom: 31px;
     background-color: #766357;
     color: #ffffff;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 26px;
 }
 
 .sentence-button:hover {
@@ -127,6 +227,35 @@ a {
 
 /* Стилизация формы поиска и бронирования начало */
 
+.sentence-block {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    width: 568px;
+    padding: 55px;
+}
+
+.sentence-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.sentence-date {
+    display: block;
+    padding-top: 5px;
+}
+
+.sentence-date label {
+    background-color: #ffffff;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    height: 100%;
+    float: left;
+}
+
 .calendar-icon {
     background: #f2f2f2;
 }
@@ -139,41 +268,51 @@ a {
     fill: #81b3d2;
 }
 
-.sentence-form label {
-    font-size: 14px;
-    line-height: 26px;
-    text-align: center;
-}
-
-.sentence-search-date input {
+.sentence-date input {
     background-color: #f2f2f2;
-    border: 2px solid #f2f2f2;
+    border: none;
     color: #000000;
     font-size: 14px;
     font-weight: 700;
     line-height: 26px;
     text-transform: uppercase;
+    text-align: left;
+    padding: 0;
+    height: 100%;
 }
 
-.sentence-search-date input:hover {
+.sentence-date input:hover {
     background-color: #ebebeb;
     border: 2px solid #ebebeb;
 }
 
-.sentence-search-date input:focus {
+.sentence-date input:focus {
     background-color: #ffffff;
     border: 2px solid #ebebeb;
 }
 
-.sentence-search-date input::-webkit-input-placeholder {
+.sentence-date input::-webkit-input-placeholder {
     color: #000000;
 }
 
-.sentence-search-date input::-moz-placeholder {
+.sentence-date input::-moz-placeholder {
     color: #000000;
 }
 
-.number-residents button {
+.sentence-adults, .sentence-kids {
+    display: block;
+    width: 50%;
+}
+
+.sentence-adults label, .sentence-kids label {
+    background-color: #ffffff;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.sentence-number button {
     background-color: #f2f2f2;
     border: 0;
     color: #a9a9a9;
@@ -184,15 +323,15 @@ a {
     text-transform: uppercase;
 }
 
-.number-residents button:hover {
+.sentence-number button:hover {
     color: #000000;
 }
 
-.number-residents button:active {
+.sentence-number button:active {
     color: #81b3d2;
 }
 
-.number-residents input {
+.sentence-number input {
     background-color: #f2f2f2;
     border: 0px;
     font-size: 14px;
@@ -202,11 +341,11 @@ a {
     text-transform: uppercase;
 }
 
-.number-residents input::-webkit-input-placeholder {
+.sentence-number input::-webkit-input-placeholder {
     color: #000000;
 }
 
-.number-residents input::-moz-placeholder {
+.sentence-number input::-moz-placeholder {
     color: #000000;
 }
 
@@ -227,23 +366,36 @@ a {
 }
 
 /* Стилизация формы поиска и бронирования конец */
+
+/* Стилизация карты на главной странице начало */
+
+.map-sedona {
+    width: 100%;
+    height: 473px;
+    background-color: #dfdbd3;
+}
+
+/* Стилизация карты на главной странице конец */
+
 /* Стилизация формы ввода параметров на странице catalog начало */
+
 .selection-hotel {
-background-color: #789ec2;
+    background-color: #789ec2;
 }
 
 .selection-hotel-legend {
     font-size: 16px;
     line-height: 21px;
     font-weight: 700;
-    color: #ffffff;  
+    color: #ffffff;
     border: none;
 }
-.selection-hotel-parameter li{
+
+.selection-hotel-parameter li {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
-    color: #ffffff;   
+    color: #ffffff;
     list-style: none;
 }
 
@@ -251,32 +403,32 @@ background-color: #789ec2;
     font-size: 16px;
     line-height: 21px;
     font-weight: 700;
-    color: #ffffff;   
+    color: #ffffff;
 }
 
-.selection-price-number{
+.selection-price-number {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
-    color: #ffffff;   
+    color: #ffffff;
 }
 
-.selection-price-number input{
+.selection-price-number input {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
-    color: #ffffff;   
+    color: #ffffff;
     background-color: transparent;
     border: 0px;
 }
 
 .selection-price-number input::-webkit-input-placeholder {
-    color: #ffffff; 
+    color: #ffffff;
     background-color: transparent;
 }
 
 .selection-price-number input::-moz-placeholder {
-    color: #ffffff; 
+    color: #ffffff;
     background-color: transparent;
 }
 
@@ -289,12 +441,13 @@ background-color: #789ec2;
     color: #ffffff;
     text-transform: uppercase;
     background-color: transparent;
-    }
+}
 
 .selection-button:hover {
     color: #000000;
     background-color: #ffffff;
-} 
+}
+
 /* Стилизация формы ввода параметров на странице catalog конец */
 
 /* Стилизация списка отелей на второй странице начало */
