@@ -41,53 +41,41 @@ a {
 
 /* Стилизация главного меню и логотипа начало */
 
-.header-line {
-    padding-left: 72px;
-    padding-right: 72px;
-    height: 56px;
-}
-
 .header-logo {
     position: absolute;
-    left: 50%;
     top: 0;
+    left: 50%;
     transform: translateX(-50%);
+    padding-right: 1px;
 }
 
 .site-navigation {
     list-style: none;
     margin: 0px;
-    padding-left: 0;
-    padding-right: 0;
     display: flex;
+    padding-left: 71px;
+    padding-right: 66px;
 }
 
 .menu-item {
     font-weight: 800;
     font-size: 14px;
+    letter-spacing: 0.27px;
     line-height: 26px;
     width: 22.7272727273%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.menu-item:nth-of-type(1) {
-    padding-right: 40px;
-}
-
-.menu-item:nth-of-type(2) {
-    padding-right: 40px;
+    padding-top: 14px;
+    padding-bottom: 16px;
 }
 
 .menu-item:nth-of-type(3) {
-    margin-left: 93px;
-    padding-left: 40px;
+    margin-left: 91px;
     text-align: right;
+    margin-right: 3px;
 }
 
 .menu-item:nth-of-type(4) {
-    padding-left: 40px;
     text-align: right;
+    padding-right: 1px;
 }
 
 .selected-page a {
@@ -111,10 +99,12 @@ a {
 /* Стилизация баннера на главной странице начало */
 
 .welcoming-banner {
-    background: #c0d6e4 url("../img/sedona-logo.jpg") no-repeat center;
+    background-color: #467ba7;
+    background-image: url("../img/sedona-logo.jpg");
+    background-repeat:  no-repeat;
+    right: 1px;
     width: 100%;
-    height: 510px;
-    background-size: cover;
+    height: 509px;
 }
 
 /* Стилизация баннера на главной странице конец */
@@ -125,10 +115,10 @@ a {
     display: block;
     width: 100%;
     text-align: center;
-    padding-top: 61px;
+    padding-top: 60px;
     color: #000000;
-    line-height: 21px;
-    margin-bottom: 52px;
+    line-height: 23px;
+    margin-bottom: 50px;
 }
 
 .main-promo-text b {
@@ -137,7 +127,8 @@ a {
 }
 
 .main-promo-text p {
-    margin-top: 32px;
+    margin-top: 28px;
+    letter-spacing: 0.1px;
 }
 
 .element-reason {
@@ -190,6 +181,7 @@ a {
     margin-bottom: 24px;
     font-size: 30px;
     line-height: 36px;
+    letter-spacing: 0.2px;
 }
 
 .sentence-text p {
@@ -255,6 +247,7 @@ a {
     line-height: 26px;
     font-weight: 700;
     align-self: center;
+    letter-spacing: 0.22px;
 }
 
 .sentence-block-date a {
@@ -539,6 +532,7 @@ a {
     font-size: 21px;
     line-height: 0px;
     font-weight: 700;
+    letter-spacing: 0.2px;
     margin: 0;
     padding: 0;
 }
