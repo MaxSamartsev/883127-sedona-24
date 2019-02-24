@@ -116,10 +116,10 @@ input [type="radio"].visually-hidden {
     display: block;
     width: 100%;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 55px;
     color: #000000;
     line-height: 23px;
-    margin-bottom: 53px;
+    margin-bottom: 52px;
 }
 
 .main-promo-text b {
@@ -239,7 +239,7 @@ input [type="radio"].visually-hidden {
 
 .sentence-text b {
     display: block;
-    margin-top: 29px;
+    margin-top: 50px;
     margin-bottom: 24px;
     font-size: 30px;
     line-height: 36px;
