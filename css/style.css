@@ -110,18 +110,6 @@ input [type="radio"].visually-hidden {
 
 /* Стилизация главного меню и логотипа конец */
 
-/* Стилизация баннера на главной странице начало */
-
-.welcoming-banner {
-    background-color: #467ba7;
-    background-image: url("../img/sedona-logo.jpg");
-    background-repeat: no-repeat;
-    height: 508px;
-    width: 100%;
-}
-
-/* Стилизация баннера на главной странице конец */
-
 /* Стилизация информационных блоков на главной странице начало */
 
 .main-promo-text {
