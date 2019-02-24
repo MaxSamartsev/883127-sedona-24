@@ -171,9 +171,14 @@ input [type="radio"].visually-hidden {
     overflow: hidden;
 }
 
-.block-reason-illustration img {
+.city​-picture {
     position: absolute;
     top: -78px;
+}
+
+.canyon-picture {
+    position: absolute;
+    top: -76px;
 }
 
 .line-reason-top {
