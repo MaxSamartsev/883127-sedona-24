@@ -45,13 +45,13 @@
                 </fieldset>
                 <fieldset class="selection-hotel-legend">
                     <legend>Тип жилья:</legend>
-                    <ul class="selection-hotel-parameter">
-                        <li><label><input type="checkbox" name="hotel" checked>Гостинница</label></li>
+                    <ul class="selection-hotel-parameter selection-type-housing">
+                        <li><label><input type="checkbox" name="hotel" checked>Гостиница</label></li>
                         <li><label><input type="checkbox" name="motel" checked>Мотель</label></li>
                         <li><label><input type="checkbox" name="apartments" checked>Апартаменты</label></li>
                     </ul>
                 </fieldset>
-                <div>
+                <div class="selection-price-block">
                     <div class="selection-price-title">Стоимость в сутки (р):</div>
                     <div>
                         <label class="selection-price-number">от<input type="text" name="min-price"
@@ -59,9 +59,24 @@
                         <label class="selection-price-number">до<input type="text" name="min-price"
                                 placeholder="3000"></label>
                     </div>
+                    <button class="selection-button" type="button">Показать</button>
                 </div>
-                <button class="selection-button" type="button">Показать</button>
             </form>
+            <div class="line-filter">
+                <div class="sorting-container">
+                <span class="search-results">Найдено: 3</span>
+                <span>Cортировка:</span>
+                <div class="block-sorting-buttons">
+                    <button class="sorting-button sorting-selected" type="button"><span>По цене</span></button>
+                    <button class="sorting-button sorting-other" type="buttom"><span>По типу</spam></button>
+                    <button class="sorting-button sorting-other" type="buttom"><span>По рейтингу</span></button>
+                </div>
+                </div>
+                <div class="sorting-direction">
+                    <button class="sorting-direction-button"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 0L0 10h11z"/></svg></button>
+                    <button class="sorting-direction-button"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 10L0 0h11"/></svg></button>
+                </div>
+            </div>
             <ul class="hotel-list">
                 <li class="hotel-card">
                     <img class="hotel-picture" src="img/hotel_amara.jpg" width="135" height="90"

@@ -27,9 +27,7 @@ img {
     height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active),
-input [type="checkbox"].visually-hidden,
-input [type="radio"].visually-hidden {
+.visually-hidden:not(:focus):not(:active), input [type="checkbox"].visually-hidden, input [type="radio"].visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -40,7 +38,6 @@ input [type="radio"].visually-hidden {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-    ;
 }
 
 .main-container {
@@ -48,15 +45,14 @@ input [type="radio"].visually-hidden {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
-    background-color: #fff;
+    box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);  
 }
 
 /* Стилизация главного меню и логотипа начало */
 
 .header-logo {
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 50%;
     transform: translateX(-50%);
     padding-right: 1px;
@@ -69,6 +65,7 @@ input [type="radio"].visually-hidden {
     flex-wrap: wrap;
     padding-left: 71px;
     padding-right: 66px;
+    background-color: #ffffff;
 }
 
 .menu-item {
@@ -100,11 +97,11 @@ input [type="radio"].visually-hidden {
     color: #000000;
 }
 
-.other-pages:hover a {
+.other-pages a:hover {
     color: #81b3d2;
 }
 
-.other-pages:active a {
+.other-pages a:active {
     color: #818181;
 }
 
@@ -112,19 +109,56 @@ input [type="radio"].visually-hidden {
 
 /* Стилизация информационных блоков на главной странице начало */
 
+.welcome-banner {
+    position: relative;
+    height: 509px;
+    overflow: hidden;
+}
+
+.welcome-background {
+    background-image: url(../img/main-background-photo.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 1200px;
+    height: 773px;
+    top: -56px;
+    z-index: -1;
+}
+
+.welcome-banner img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 75px;
+    padding-bottom: 80px;
+}
+
+.welcome-polygon {
+    background-image: url(../img/main-polygon.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    width: 1200px;
+    height: 60px;
+    left: 0px;
+    bottom: -2px;
+}
+
 .main-promo-text {
     display: block;
     width: 100%;
     text-align: center;
-    padding-top: 55px;
     color: #000000;
+    background-color: #ffffff;
     line-height: 23px;
-    margin-bottom: 52px;
+    padding-top: 60px;
+    padding-bottom: 38px;
 }
 
 .main-promo-text b {
+    font-weight: 700;
     font-size: 21px;
-    font-weight: 400;
+    letter-spacing: 0.1px;
 }
 
 .main-promo-text p {
@@ -240,6 +274,7 @@ input [type="radio"].visually-hidden {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: #ffffff;
 }
 
 .sentence-text b {
@@ -280,16 +315,17 @@ input [type="radio"].visually-hidden {
 
 /* Стилизация блока "Заинтересовались?" конец */
 
-/* Стилизация формы поиска и бронирования начало */
-
 .sentence-block {
+    left:0;
+    right:0;
+    margin: auto;
     position: absolute;
-    text-align: center;
     background-color: #ffffff;
     width: 568px;
     padding: 55px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 .sentence-date {
@@ -297,7 +333,7 @@ input [type="radio"].visually-hidden {
     flex-direction: row;
     justify-content: space-between;
     height: 38px;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
 }
 
 .sentence-block-date {
@@ -317,17 +353,25 @@ input [type="radio"].visually-hidden {
     letter-spacing: 0.22px;
 }
 
-.sentence-block-date a {
+.sentence-block-date button {
+    outline: 0;
     position: absolute;
-    left: 316px;
-    top: 8px;
+    background: none;
+    border: 0;
+    right: 3px;
+    top: 7px;
+    cursor: pointer;
 }
 
-.calendar-icon:hover path {
+.calendar-button svg {
+    fill: #cdcdcd
+}
+
+.calendar-button:hover svg {
     fill: #000000;
 }
 
-.calendar-icon:active path {
+.calendar-button:active svg {
     fill: #81b3d2;
 }
 
@@ -355,18 +399,11 @@ input [type="radio"].visually-hidden {
     border: 2px solid #ebebeb;
 }
 
-.sentence-date input::-webkit-input-placeholder {
-    color: #000000;
-}
-
-.sentence-date input::-moz-placeholder {
-    color: #000000;
-}
-
 .total-resident-data {
     display: flex;
     flex-direction: row;
-    margin-bottom: 53px;
+    margin-top: 1px;
+    margin-bottom: 54px;
     height: 38px;
 }
 
@@ -420,6 +457,7 @@ input [type="radio"].visually-hidden {
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
+    cursor: pointer;
 }
 
 .resident-number input {
@@ -433,7 +471,7 @@ input [type="radio"].visually-hidden {
     width: 38px;
     height: 38px;
     padding: 0;
-    outline: none;
+    outline: none;    
 }
 
 .resident-number input:focus {
@@ -463,6 +501,7 @@ input [type="radio"].visually-hidden {
     text-transform: uppercase;
     padding-top: 17px;
     padding-bottom: 15px;
+    cursor: pointer;
 }
 
 .search-button:hover {
@@ -490,14 +529,35 @@ input [type="radio"].visually-hidden {
 
 .selection-hotel {
     background-color: #789ec2;
+    display: flex;
+    background-image: url(../img/filter-background.jpg);
+    background-position: 0px -55px;
+    background-repeat: no-repeat;   
+    overflow: hidden;
+    padding-top: 27px;
+    padding-left: 59px;
 }
 
 .selection-hotel-legend {
+    letter-spacing: 0.2px;
+    box-sizing: border-box;
     font-size: 16px;
     line-height: 21px;
     font-weight: 700;
     color: #ffffff;
     border: none;
+    padding-right: 96px;
+}
+
+.selection-hotel-parameter {
+    display: flex;
+    flex-direction: column;
+    align-items:  flex-start;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-top: 19px;
+    padding-left: 10px;
+    margin-bottom: 21px;
 }
 
 .selection-hotel-parameter li {
@@ -506,9 +566,29 @@ input [type="radio"].visually-hidden {
     font-weight: 400;
     color: #ffffff;
     list-style: none;
+    padding-left: 15px;
+    padding-bottom: 25px;
 }
 
+.selection-type-housing li {
+    padding-left: 20px;
+}
+
+.selection-hotel-legend li:last-child {
+    padding-bottom: 0px;
+}
+
+.selection-price-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 200px;
+    padding-left: 48px;
+}
+
+
 .selection-price-title {
+    letter-spacing: 0.15px;
     font-size: 16px;
     line-height: 21px;
     font-weight: 700;
@@ -556,6 +636,108 @@ input [type="radio"].visually-hidden {
     background-color: #ffffff;
 }
 
+/*Стилизация панели сортировки на второй странице */
+
+.line-filter {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding-top: 30px;
+    padding-left: 72px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.sorting-container {
+    display: flex;
+    align-items: center ;
+}
+
+.search-results {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    margin-right: 48px;
+    padding-bottom: 5px;
+}
+
+.sorting-container span:nth-of-type(2) {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #000000;
+    text-transform: uppercase;
+    margin-right: 40px;
+}
+
+.block-sorting-buttons {
+    margin-bottom: 4px;
+}
+
+.sorting-button {
+    padding: 0;
+    margin-left: 0px;
+    margin-right: 29px;
+    margin-top: 4px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.sorting-button span {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.sorting-other {
+    border-bottom: 1px dotted #81b3d2;
+    color: #cacaca;
+}
+
+.sorting-other:hover {
+    color: #81b3d2;
+} 
+
+.sorting-other:active {
+    color: #000000;
+    border-bottom: none;
+}
+
+.sorting-selected span {
+    color: #81b3d2;
+    border-bottom: none;
+}
+
+.sorting-direction {
+    margin-right: 66px;
+    margin-top: 4px;
+}
+
+.sorting-direction-button {
+    margin: 0;
+    padding-left: 3px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    fill: #cacaca;
+}
+
+.sorting-direction-button:hover {
+    fill: #231f20;
+}
+
+.sorting-direction-button:active {
+    fill: #81b3d2;
+}
+
 /* Стилизация формы ввода параметров на странице catalog конец */
 
 /* Стилизация списка отелей на второй странице начало */
@@ -571,10 +753,11 @@ input [type="radio"].visually-hidden {
 .hotel-card {
     display: flex;
     border-bottom: 1px solid #e5e5e5;
-    padding-top: 30px;
+    padding-top: 25px;
 }
 
 .hotel-picture {
+    margin-top: 5px;
     margin-left: 72px;
     margin-right: 30px;
     margin-bottom: 30px;
@@ -591,13 +774,13 @@ input [type="radio"].visually-hidden {
 .hotel-title {
     box-sizing: border-box;
     height: 15px;
-    margin-top: 9px;
+    margin-bottom: 14px;
 }
 
 .hotel-title h2 {
     color: #000000;
     font-size: 21px;
-    line-height: 0px;
+    line-height: 26px;
     font-weight: 700;
     letter-spacing: 0.2px;
     margin: 0;
@@ -682,6 +865,7 @@ input [type="radio"].visually-hidden {
 
 .number-stars {
     margin-bottom: 47px;
+    margin-top: 4px;
     height: 17px;
     display: flex;
     justify-content: flex-end;
@@ -729,6 +913,7 @@ input [type="radio"].visually-hidden {
     align-items: flex-start;
     padding-top: 35px;
     padding-bottom: 34px;
+    background-color: #fdfdfd;
 }
 
 .block-hashtag {
@@ -747,7 +932,6 @@ input [type="radio"].visually-hidden {
 
 .block-soc-icon {
     width: 33.33%;
-    padding-left: 125px;
     margin-top: 1px;
 }
 
@@ -757,17 +941,20 @@ input [type="radio"].visually-hidden {
     justify-content: space-between;
     width: 150px;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .social-icon {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 48px;
     width: 46px;
     padding: 0;
     margin: 0;
     background-color: #81b3d2;
     position: relative;
+    fill: #ffffff;
 }
 
 .social-icon:hover {
@@ -776,34 +963,7 @@ input [type="radio"].visually-hidden {
 
 .social-icon:active {
     background-color: #669ec0;
-}
-
-.social-icon:active path {
     fill: #5496bd;
-}
-
-.icon-twitter {
-    position: absolute;
-    top: 17px;
-    left: 15px;
-    width: 17px;
-    height: 15px;
-}
-
-.icon-facebook {
-    position: absolute;
-    top: 13px;
-    left: 17px;
-    width: 12px;
-    height: 22px;
-}
-
-.icon-youtube {
-    position: absolute;
-    top: 16px;
-    left: 13px;
-    width: 20px;
-    height: 16px;
 }
 
 .block-copyright {
