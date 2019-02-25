@@ -45,7 +45,7 @@ img {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);  
+    box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2); 
 }
 
 /* Стилизация главного меню и логотипа начало */
@@ -63,31 +63,33 @@ img {
     margin: 0px;
     display: flex;
     flex-wrap: wrap;
-    padding-left: 71px;
-    padding-right: 66px;
     background-color: #ffffff;
+    padding-left:40px;
+    padding-right:40px;
 }
 
 .menu-item {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.27px;
     line-height: 26px;
-    width: 22.7272727273%;
+    width: 243px;
     padding-top: 14px;
     padding-bottom: 16px;
+    padding-left: 30px;
+    
 }
 
 .menu-item:nth-of-type(3) {
-    margin-left: 91px;
+    margin-left: 118px;
     text-align: right;
-    margin-right: 3px;
+    
 }
 
 .menu-item:nth-of-type(4) {
     text-align: right;
-    padding-right: 1px;
 }
+
 
 .selected-page a {
     color: #766357;
@@ -200,7 +202,7 @@ img {
 
 .block-reason-illustration {
     position: relative;
-    width: 800px;
+    width: 700px;
     height: 256px;
     overflow: hidden;
 }
@@ -336,7 +338,7 @@ img {
     margin-bottom: 29px;
 }
 
-.sentence-block-date {
+.sentence-date-block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -353,7 +355,7 @@ img {
     letter-spacing: 0.22px;
 }
 
-.sentence-block-date button {
+.sentence-date-block button {
     outline: 0;
     position: absolute;
     background: none;
@@ -926,7 +928,7 @@ img {
     text-align: center;
     color: #000000;
     font-size: 21px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 26px;
 }
 
