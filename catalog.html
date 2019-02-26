@@ -38,28 +38,53 @@
                 <fieldset class="selection-hotel-legend">
                     <legend>Инфраструктура:</legend>
                     <ul class="selection-hotel-parameter">
-                        <li><label><input type="checkbox" name="pool" checked>Бассейн</label></li>
-                        <li><label><input type="checkbox" name="parking">Парковка</label></li>
-                        <li><label><input type="checkbox" name="wi-fi">Wi-Fi</label></li>
+                        <li>
+                            <label>
+                                <input class="visually-hidden" type="checkbox" name="pool" checked>Бассейн
+                                <span class="checkbox-indicator"></span>
+                            </label></li>
+                        <li>
+                            <label>
+                                <input class="visually-hidden" type="checkbox" name="parking">Парковка
+                                <span class="checkbox-indicator"></span>
+                            </label></li>
+                        <li><label>
+                                <input class="visually-hidden" type="checkbox" name="wi-fi">Wi-Fi
+                                <span class="checkbox-indicator"></span>
+                            </label></li>
                     </ul>
                 </fieldset>
                 <fieldset class="selection-hotel-legend">
                     <legend>Тип жилья:</legend>
                     <ul class="selection-hotel-parameter selection-type-housing">
-                        <li><label><input type="checkbox" name="hotel" checked>Гостиница</label></li>
-                        <li><label><input type="checkbox" name="motel" checked>Мотель</label></li>
-                        <li><label><input type="checkbox" name="apartments" checked>Апартаменты</label></li>
+                        <li><label>
+                                <input class="visually-hidden" type="checkbox" name="hotel" checked>Гостиница
+                                <span class="checkbox-indicator"></span>
+                            </label></li>
+                        <li><label>
+                                <input class="visually-hidden" type="checkbox" name="motel" checked>Мотель
+                                <span class="checkbox-indicator"></span>
+                            </label></li>
+                        <li><label>
+                                <input class="visually-hidden" type="checkbox" name="apartments" checked>Апартаменты
+                                <span class="checkbox-indicator"></span>
+                            </label></li>
                     </ul>
                 </fieldset>
-                <div class="selection-price-block">
+                <div class="selection-price-range">
                     <div class="selection-price-title">Стоимость в сутки (р):</div>
-                    <div>
-                        <label class="selection-price-number">от<input type="text" name="min-price"
-                                placeholder="0"></label>
-                        <label class="selection-price-number">до<input type="text" name="min-price"
-                                placeholder="3000"></label>
+                    <div class="price-controls">
+                        <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                        <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
                     </div>
-                    <button class="selection-button" type="button">Показать</button>
+                    <div class="range-controls">
+                        <div class="scale">
+                            <div class="bar"></div>
+                        </div>
+                        <div class="range-toggle range-toggle-min"></div>
+                        <div class="range-toggle range-toggle-max"></div>
+                    </div>
+                    <button class="btn-transparent" type="submit">Показать</button>
                 </div>
             </form>
             <div class="line-filter">

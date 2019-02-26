@@ -27,7 +27,7 @@ img {
     height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active), input [type="checkbox"].visually-hidden, input [type="radio"].visually-hidden {
+.visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -45,7 +45,7 @@ img {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);  
+    box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
 }
 
 /* Стилизация главного меню и логотипа начало */
@@ -64,8 +64,8 @@ img {
     display: flex;
     flex-wrap: wrap;
     background-color: #ffffff;
-    padding-left:40px;
-    padding-right:40px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .menu-item {
@@ -76,13 +76,11 @@ img {
     padding-top: 18px;
     padding-bottom: 17px;
     padding-left: 30px;
-    
 }
 
 .menu-item:nth-of-type(3) {
     margin-left: 118px;
     text-align: right;
-    
 }
 
 .menu-item:nth-of-type(4) {
@@ -266,7 +264,6 @@ img {
     background-repeat: no-repeat;
     width: 64px;
     height: 76px;
-    
 }
 
 .element-reason h3 {
@@ -345,9 +342,15 @@ img {
 
 /* Стилизация блока "Заинтересовались?" конец */
 
-.sentence-container {
-    left:0;
-    right:0;
+.sentence-form-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sentence-form {
+    left: 0;
+    right: 0;
     margin: auto;
     position: absolute;
     background-color: #ffffff;
@@ -356,6 +359,8 @@ img {
     display: flex;
     flex-direction: column;
     box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+    z-index: 1;
+    /* top: 100%; */
 }
 
 .sentence-date {
@@ -384,7 +389,6 @@ img {
 }
 
 .sentence-area-date button {
-    outline: 0;
     position: absolute;
     background: none;
     border: 0;
@@ -416,7 +420,6 @@ img {
     text-align: left;
     width: 100%;
     padding-left: 11px;
-    outline: none;
 }
 
 .sentence-date input:hover {
@@ -470,7 +473,6 @@ img {
     padding: 0;
     margin: 0;
     width: 38px;
-    outline: none;
     color: #a9a9a9;
 }
 
@@ -500,7 +502,6 @@ img {
     width: 38px;
     height: 38px;
     padding: 0;
-    outline: none;    
 }
 
 .resident-number input:focus {
@@ -508,20 +509,11 @@ img {
     border: 2px solid #f2f2f2;
 }
 
-.resident-number input::-webkit-input-placeholder {
-    color: #000000;
-}
-
-.resident-number input::-moz-placeholder {
-    color: #000000;
-}
-
 /* Кнопка найти */
 
 .search-button {
     background-color: #81b3d2;
     border: 0px;
-    outline: none;
     color: #ffffff;
     width: 458px;
     font-size: 21px;
@@ -542,6 +534,75 @@ img {
     color: #88b6d1;
 }
 
+.sentence-form-hide {
+    animation: formhide 0.7s forwards;
+}
+
+.sentence-form-show {
+    animation: formshow 0.7s forwards;
+}
+
+
+@-webkit-keyframes formshow {
+    0% {
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+      opacity: 0;
+    }
+  
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes formshow {
+    0% {
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+      opacity: 0;
+    }
+  
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes formhide {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  
+    100% {
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  
+  @keyframes formhide {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  
+    100% {
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+
 /* Стилизация формы поиска и бронирования конец */
 
 /* Стилизация карты на главной странице начало */
@@ -561,109 +622,190 @@ img {
     display: flex;
     background-image: url(../img/filter-background.jpg);
     background-position: 0px -55px;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
     overflow: hidden;
     padding-top: 27px;
-    padding-left: 59px;
+    padding-left: 72px;
+    padding-bottom: 6px;
 }
 
 .selection-hotel-legend {
     letter-spacing: 0.2px;
-    box-sizing: border-box;
     font-size: 16px;
     line-height: 21px;
     font-weight: 700;
     color: #ffffff;
     border: none;
-    padding-right: 96px;
+    padding-right: 115px;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0px;
+    margin: 0;
 }
 
 .selection-hotel-parameter {
     display: flex;
     flex-direction: column;
-    align-items:  flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
     padding-left: 0;
-    margin-top: 19px;
-    padding-left: 10px;
-    margin-bottom: 21px;
+    padding-top: 25px;
+    margin: 0;
 }
 
 .selection-hotel-parameter li {
+    position: relative;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
     color: #ffffff;
     list-style: none;
-    padding-left: 15px;
+    padding-left: 40px;
     padding-bottom: 25px;
 }
 
-.selection-type-housing li {
-    padding-left: 20px;
+.selection-hotel-parameter input[type="checkbox"]+.checkbox-indicator {
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 23px;
 }
 
-.selection-hotel-legend li:last-child {
-    padding-bottom: 0px;
+.selection-hotel-parameter input[type="checkbox"]:focus+.checkbox-indicator {
+    border-color: #663d15;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
 }
 
-.selection-price-block {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 200px;
-    padding-left: 48px;
+.selection-hotel-parameter input[type="checkbox"]:checked+.checkbox-indicator {
+    background-image: url(../img/checkbox-on.svg);
 }
 
+/*Форма ввода диапозона цен на второй странице начало*/
 
-.selection-price-title {
-    letter-spacing: 0.15px;
-    font-size: 16px;
-    line-height: 21px;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.selection-price-number {
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 400;
-    color: #ffffff;
-}
-
-.selection-price-number input {
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 400;
-    color: #ffffff;
-    background-color: transparent;
-    border: 0px;
-}
-
-.selection-price-number input::-webkit-input-placeholder {
-    color: #ffffff;
-    background-color: transparent;
-}
-
-.selection-price-number input::-moz-placeholder {
-    color: #ffffff;
-    background-color: transparent;
-}
-
-.selection-button {
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 400;
-    border: 0px;
+.selection-price-range {
+    width: 318px;
+    box-sizing: content-box;
     color: #ffffff;
     text-transform: uppercase;
-    background-color: transparent;
+    margin-left: 232px;
 }
 
-.selection-button:hover {
-    color: #000000;
-    background-color: #ffffff;
+.selection-price-title {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
 }
+
+.price-controls {
+    position: relative;
+    height: 32px;
+    margin-bottom: 20px;
+    font-size: 0;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    padding-left: 10px;
+}
+
+.price-controls::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 22px;
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 28px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.price-controls .min-price, .price-controls .max-price {
+    top: 10px;
+    width: 90px;
+    padding-left: 55px;
+}
+
+.price-controls input {
+    width: 50px;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
+}
+
+.range-controls {
+    position: relative;
+    margin-bottom: 32px;
+    margin-left: 1px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+    width: 80%;
+    height: 2px;
+    background: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    top: -9px;
+    width: 4px;
+    height: 4px;
+    background: #f2f2f2;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+
+.range-toggle:hover {
+    background: #1c4f80;
+}
+
+.range-toggle-min {
+    left: 0;
+}
+
+.range-toggle-max {
+    left: 252px;
+}
+
+.btn-transparent {
+    display: block;
+    margin-left: 85px;
+    padding: 6px 34px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.btn-transparent:hover {
+    color: #000000;
+    background: #ffffff;
+}
+
+/*Форма ввода диапозона цен на второй странице конец*/
 
 /*Стилизация панели сортировки на второй странице */
 
@@ -679,7 +821,7 @@ img {
 
 .sorting-container {
     display: flex;
-    align-items: center ;
+    align-items: center;
 }
 
 .search-results {
@@ -712,7 +854,6 @@ img {
     margin-top: 4px;
     background: none;
     border: none;
-    outline: none;
 }
 
 .sorting-button span {
@@ -732,7 +873,7 @@ img {
 
 .sorting-other:hover {
     color: #81b3d2;
-} 
+}
 
 .sorting-other:active {
     color: #000000;
@@ -754,7 +895,6 @@ img {
     padding-left: 3px;
     background: none;
     border: none;
-    outline: none;
     cursor: pointer;
     fill: #cacaca;
 }
@@ -796,12 +936,9 @@ img {
 .hotel-info {
     font-size: 14px;
     list-style: none;
-    display: flex;
-    flex-direction: column;
 }
 
 .hotel-title {
-    box-sizing: border-box;
     margin-bottom: 3px;
 }
 
@@ -824,7 +961,7 @@ img {
 }
 
 .hotel-price {
-    margin-top: 4px;
+    margin-top: 7px;
     display: flex;
 }
 
