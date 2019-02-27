@@ -1,5 +1,6 @@
 var searchOpen = document.querySelector(".sentence-button");
 var searchForm =  document.querySelector(".sentence-form");
+var dateIn = searchForm.querySelector("[name=arrival-date]");
 
 if (searchOpen) {
   if (searchForm) {
@@ -10,5 +11,6 @@ if (searchOpen) {
     event.preventDefault();
     searchForm.classList.toggle("sentence-form-hide");
     searchForm.classList.toggle("sentence-form-show");
+    dateIn.focus();
   });
 };
