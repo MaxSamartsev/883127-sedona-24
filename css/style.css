@@ -392,13 +392,17 @@ img {
     letter-spacing: 0.22px;
 }
 
-.sentence-area-date button {
+.calendar-button {
     position: absolute;
     background: none;
     border: 0;
-    right: 3px;
-    top: 7px;
+    right: 0px;
+    top: 1px;
     cursor: pointer;
+    width: 25px;
+    height: 36px; 
+    margin: 0 auto;  
+    padding: 0; 
 }
 
 .calendar-button svg {
@@ -679,7 +683,7 @@ img {
     left: 0px;
     background-image: url(../img/checkbox-off.svg);
     background-repeat: no-repeat;
-    width: 23px;
+    width: 27px;
     height: 23px;  
     cursor: pointer;    
 }
@@ -701,7 +705,7 @@ img {
     box-sizing: content-box;
     color: #ffffff;
     text-transform: uppercase;
-    margin-left: 232px;
+    margin-left: 231px;
 }
 
 .selection-price-title {
@@ -861,9 +865,11 @@ img {
     padding: 0;
     margin-left: 0px;
     margin-right: 29px;
-    margin-top: 4px;
+    margin-top: 3px;
     background: none;
     border: none;
+    border-bottom: 1px dotted #81b3d2;
+    color: #cacaca;
 }
 
 .sorting-button span {
@@ -876,21 +882,16 @@ img {
     cursor: pointer;
 }
 
-.sorting-other {
-    border-bottom: 1px dotted #81b3d2;
-    color: #cacaca;
-}
-
-.sorting-other:hover {
+.sorting-button:hover {
     color: #81b3d2;
 }
 
-.sorting-other:active {
+.sorting-button:active {
     color: #000000;
     border-bottom: none;
 }
 
-.sorting-selected span {
+.sorting-selected {
     color: #81b3d2;
     border-bottom: none;
 }
