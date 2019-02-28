@@ -393,16 +393,17 @@ img {
 }
 
 .calendar-button {
+    box-sizing: content-box;
     position: absolute;
     background: none;
     border: 0;
-    right: 0px;
+    right: 1px;
     top: 1px;
     cursor: pointer;
     width: 25px;
-    height: 36px; 
-    margin: 0 auto;  
-    padding: 0; 
+    height: 35px;
+    padding-right: 6px;
+    padding-left: 6px;
 }
 
 .calendar-button svg {
@@ -954,6 +955,9 @@ img {
 }
 
 .hotel-title h2 {
+    block-size: content;
+    display: inline-block;
+    
     color: #000000;
     font-size: 21px;
     line-height: 26px;
