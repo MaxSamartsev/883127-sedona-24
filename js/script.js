@@ -54,7 +54,9 @@ if (searchOpen) {
         numberKids.value = storageKids;
       }
     }
-    dateIn.focus();
+    if (searchForm.classList.contains("sentence-form-show")) {
+      dateIn.focus();
+    })
   });
 };
 
@@ -87,3 +89,13 @@ searchForm.addEventListener("submit", function (event) {
     }
   }
 });
+
+
+var addAdults = document.querySelector(".add-adults");
+
+if (addAdults) {
+  addAdults.addEventListener("click", function (event) {
+    event.preventDefault();
+    numberAdult.value = numberAdult.value + 1;
+  });
+};

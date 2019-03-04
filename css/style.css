@@ -1136,6 +1136,7 @@ img {
     letter-spacing: 0.2px;
     margin: 0;
     padding: 1px;
+    vertical-align: center;
     width: 258px;
 }
 
