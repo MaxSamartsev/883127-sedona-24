@@ -157,17 +157,17 @@
             <div class="resident-data adults-data">
               <label for="adults">Взрослые:</label>
               <div class="resident-number">
-                <button type="button" class="resident-number-control"><span class="icon-number">−</span></button>
-                <input type="text" name="adults" id="adults" value="2" required>
+                <button type="button" class="resident-number-control minus-adults"><span class="icon-number">−</span></button>
+                <input type="number" name="adults" id="adults" value="2" min="1" required>
                 <button type="button" class="resident-number-control add-adults"><span class="icon-number">+</span></button>
               </div>
             </div>
             <div class="resident-data kids-data">
               <label for="kids">Дети:</label>
               <div class="resident-number">
-                <button type="button" class="resident-number-control"><span class="icon-number">−</span></button>
-                <input type="text" name="kids" id="kids" value="1" required>
-                <button type="button" class="resident-number-control"><span class="icon-number">+</span></button>
+                <button type="button" class="resident-number-control minus-kids"><span class="icon-number">−</span></button>
+                <input type="number" name="kids" id="kids" value="1" min="0" required>
+                <button type="button" class="resident-number-control add-kids"><span class="icon-number">+</span></button>
               </div>
             </div>
           </div>
@@ -226,7 +226,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

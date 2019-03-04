@@ -560,7 +560,7 @@ img {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    flex-direction: row;
+    flex-direction: row;    
 }
 
 .kids-data {
@@ -606,6 +606,15 @@ img {
     width: 38px;
     height: 38px;
     padding: 0;
+}
+
+.resident-number input::-webkit-outer-spin-button, 
+.resident-number input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.resident-number input[type='number'] {
+    -moz-appearance: textfield;
 }
 
 .resident-number input:focus {

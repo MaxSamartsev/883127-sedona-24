@@ -18,6 +18,7 @@ try {
 
 // При подключении JS форма поиска скрывается (если JS не работает форма видна, инчае возникает проблема доступности)
 // Проверяю наличие атрибуда required и если он есть удаляю для применения проверки через JS
+// Проверяю наличие атрибуда min и если он есть удаляю для применения проверки через JS, т.к. заселиться меньше 1-го взрослого не может
 
 if (searchForm) {
   searchForm.classList.add("sentence-form-hide");
@@ -33,6 +34,12 @@ if (searchForm) {
   }
   if (numberKids.hasAttribute("required")) {
     numberKids.removeAttribute("required");
+  }
+  if (numberKids.hasAttribute("min")) {
+    numberKids.removeAttribute("min");
+  }
+  if (numberAdults.hasAttribute("min")) {
+    numberAdults.removeAttribute("min");
   }
 };
 
@@ -56,7 +63,7 @@ if (searchOpen) {
     }
     if (searchForm.classList.contains("sentence-form-show")) {
       dateIn.focus();
-    })
+    }
   });
 };
 
@@ -76,7 +83,7 @@ window.addEventListener("keydown", function (event) {
 //Проверка заполнения формы
 
 searchForm.addEventListener("submit", function (event) {
-  if (!dateIn.value || !dateOut.value || !numberAdults.value || !numberKids.value) {
+  if (!dateIn.value || !dateOut.value || !numberAdults.value || !numberKids.value || numberAdults.value <= 0 || numberKids.value < 0) {
     event.preventDefault();
     searchForm.classList.remove("modal-error");
     searchForm.offsetWidth = searchForm.offsetWidth;
@@ -90,12 +97,41 @@ searchForm.addEventListener("submit", function (event) {
   }
 });
 
+//Ввод данных в форму поиска на главной тсранице через кнопки +-
 
 var addAdults = document.querySelector(".add-adults");
+var minusAdults = document.querySelector(".minus-adults");
+var addKids = document.querySelector(".add-kids");
+var minusKids = document.querySelector(".minus-kids");
 
 if (addAdults) {
   addAdults.addEventListener("click", function (event) {
     event.preventDefault();
-    numberAdult.value = numberAdult.value + 1;
+    numberAdults.value = Number(numberAdults.value) + 1;
+  });
+};
+
+if (minusAdults) {
+  minusAdults.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (Number(numberAdults.value) > 1) {
+    numberAdults.value = Number(numberAdults.value) - 1;
+  }
+  });
+};
+
+if (addKids) {
+  addKids.addEventListener("click", function (event) {
+    event.preventDefault();
+    numberKids.value = Number(numberKids.value) + 1;
+  });
+};
+
+if (minusKids) {
+  minusKids.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (Number(numberKids.value) > 0) {
+      numberKids.value = Number(numberKids.value) - 1;
+  }
   });
 };
