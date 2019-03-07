@@ -105,7 +105,7 @@ img {
 }
 
 .menu-item a:active {
-    color: #818181;
+    color: #c7c7c7;
 }
 
 .selected-page a {
@@ -163,8 +163,8 @@ img {
     line-height: 23px;
     padding-top: 60px;
     padding-bottom: 38px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 300px;
+    padding-right: 300px;
 }
 
 .main-promo-text b {
@@ -207,12 +207,14 @@ img {
     text-align: center;
     padding-top: 47px;
     padding-bottom: 38px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 48px;
+    padding-right: 48px;
 }
 
 .block-reason-title h3 {
     margin-top: 0;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-bottom: 24px;
     font-size: 21px;
 }
@@ -265,8 +267,13 @@ img {
     font-size: 14px;
     text-align: center;
     letter-spacing: 0.05px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 57px;
+    padding-right: 57px;
+}
+
+.line-reason-noicon .element-reason {
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 .container-reason-icon {
@@ -310,6 +317,8 @@ img {
     font-size: 21px;
     font-weight: 700;
     text-align: center;
+    margin-left: 80px;
+    margin-right: 80px;
     margin-top: 21px;
     margin-bottom: 10px;
     font-size: 21px;
@@ -560,7 +569,7 @@ img {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    flex-direction: row;    
+    flex-direction: row;
 }
 
 .kids-data {
@@ -608,8 +617,7 @@ img {
     padding: 0;
 }
 
-.resident-number input::-webkit-outer-spin-button, 
-.resident-number input::-webkit-inner-spin-button {
+.resident-number input::-webkit-outer-spin-button, .resident-number input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
@@ -774,6 +782,8 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     background-image: url(../img/filter-background.jpg);
     background-position: 0px -55px;
@@ -846,14 +856,16 @@ img {
     cursor: pointer;
 }
 
-.selection-hotel-parameter input[type="checkbox"]:focus+.checkbox-indicator {
-    border-color: #663d15;
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
+.selection-hotel-parameter input[type="checkbox"]:disabled+.checkbox-indicator {
+    background-image: url(../img/checkbox-off-disabled.svg);
 }
 
 .selection-hotel-parameter input[type="checkbox"]:checked+.checkbox-indicator {
     background-image: url(../img/checkbox-on.svg);
+}
+
+.selection-hotel-parameter input[type="checkbox"]:checked:disabled+.checkbox-indicator {
+    background-image: url(../img/checkbox-on-disabled.svg);
 }
 
 /*Форма ввода диапозона цен на второй странице начало*/
@@ -1088,6 +1100,10 @@ img {
     fill: #81b3d2;
 }
 
+.sorting-direction-selected {
+    fill: #81b3d2;
+}
+
 /* Стилизация формы ввода параметров на странице catalog конец */
 
 /* Стилизация списка отелей на второй странице начало */
@@ -1110,6 +1126,8 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     border-bottom: 1px solid #e5e5e5;
     padding-top: 24px;
@@ -1361,7 +1379,6 @@ img {
     position: relative;
     fill: #ffffff;
 }
-
 
 .social-icon:hover {
     background-color: #669ec0;

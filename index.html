@@ -12,9 +12,9 @@
 <body>
   <div class="main-container">
     <header>
-      <a class="header-logo" href="index.html" title="Перейти на главную страницу">
+      <div class="header-logo">
         <img src="./img/logo-sedona.svg" width="142" height="70" alt="Логотип города Седона">
-      </a>
+      </div>
       <nav>
         <ul class="site-navigation">
           <li class="menu-item">
@@ -40,7 +40,7 @@
         <div class="welcome-polygon"></div>
       </div>
       <div class="main-promo-text">
-        <b>Седона — небольшой городок в аризоне,<br>
+        <b>Седона — небольшой городок в аризоне,
           заслуживающий большего!</b>
         <p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
       </div>
@@ -48,9 +48,9 @@
         <h2 class="visually-hidden">Причины, по которым Вам следует посетить Седону</h2>
         <div class="block-reason">
           <div class="block-reason-title">
-            <h3>Настоящий<br>городок</h3>
+            <h3>Настоящий городок</h3>
             <p>— №1 —</p>
-            <p>Седона — не аттракцион для туристов,<br>там течет своя жизнь</p>
+            <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
           </div>
           <div class="block-reason-illustration">
             <img class="city​-picture" width="800" height="400" src="./img/sedona-photo1.jpg"
@@ -65,14 +65,14 @@
               </div>
             </div>
             <h3>Жильё</h3>
-            <p>Рекомендуем пожить в настоящем<br>мотеле, все как в кино!</p>
+            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
           <div class="element-reason">
             <div class="container-reason-icon">
               <div class="element-reason-icon icon-burger"></div>
             </div>
             <h3>Еда</h3>
-            <p>Всегда заказывайте фирменный бургер,<br>Вы не разочаруетесь!</p>
+            <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
           </div>
           <div class="element-reason">
             <div class="container-reason-icon">
@@ -80,7 +80,7 @@
               </div>
             </div>
             <h3>Сувениры</h3>
-            <p>Не только китайского, но и местного<br>производства!</p>
+            <p>Не только китайского, но и местного производства!</p>
           </div>
         </div>
         <div class="block-reason">
@@ -89,26 +89,26 @@
               alt="Фотография моста Дьявола">
           </div>
           <div class="block-reason-title">
-            <h3>Там есть<br>Мост Дьявола</h3>
+            <h3>Там есть<br>мост Дьявола</h3>
             <p>— №2 —</p>
-            <p>Да, по нему можно пройти! Если конечно <br>Вы осмелитесь</p>
+            <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
           </div>
         </div>
-        <div class="line-reason-bottom">
+        <div class="line-reason-bottom line-reason-noicon">
           <div class="element-reason">
-            <h3>Небольшая<br>площадь</h3>
+            <h3>Небольшая площадь</h3>
             <p>— №3 —</p>
-            <p>Все достопримечательности<br>находятся очень близко</p>
+            <p>Все достопримечательности находятся очень близко</p>
           </div>
           <div class="element-reason">
-            <h3>Красивая<br>дорога</h3>
+            <h3>Красивая дорога</h3>
             <p>— №4 —</p>
-            <p>Ехать в Седону из Лас-Вегаса совсем<br>не скучно!</p>
+            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
           <div class="element-reason">
-            <h3>Мало<br>туристов</h3>
+            <h3>Мало туристов</h3>
             <p>— №5 —</p>
-            <p>Большинство едет в Гранд Каньон<br>и толпится там</p>
+            <p>Большинство едет в Гранд Каньон и толпится там</p>
           </div>
         </div>
       </section>
@@ -157,17 +157,21 @@
             <div class="resident-data adults-data">
               <label for="adults">Взрослые:</label>
               <div class="resident-number">
-                <button type="button" class="resident-number-control minus-adults"><span class="icon-number">−</span></button>
+                <button type="button" class="resident-number-control minus-adults"><span
+                    class="icon-number">−</span></button>
                 <input type="number" name="adults" id="adults" value="2" min="1" required>
-                <button type="button" class="resident-number-control add-adults"><span class="icon-number">+</span></button>
+                <button type="button" class="resident-number-control add-adults"><span
+                    class="icon-number">+</span></button>
               </div>
             </div>
             <div class="resident-data kids-data">
               <label for="kids">Дети:</label>
               <div class="resident-number">
-                <button type="button" class="resident-number-control minus-kids"><span class="icon-number">−</span></button>
+                <button type="button" class="resident-number-control minus-kids"><span
+                    class="icon-number">−</span></button>
                 <input type="number" name="kids" id="kids" value="1" min="0" required>
-                <button type="button" class="resident-number-control add-kids"><span class="icon-number">+</span></button>
+                <button type="button" class="resident-number-control add-kids"><span
+                    class="icon-number">+</span></button>
               </div>
             </div>
           </div>
@@ -226,7 +230,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

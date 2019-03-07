@@ -97,7 +97,7 @@ searchForm.addEventListener("submit", function (event) {
   }
 });
 
-//Ввод данных в форму поиска на главной тсранице через кнопки +-
+//Ввод данных в форму поиска на главной странице через кнопки +-
 
 var addAdults = document.querySelector(".add-adults");
 var minusAdults = document.querySelector(".minus-adults");
