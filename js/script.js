@@ -115,8 +115,8 @@ if (minusAdults) {
   minusAdults.addEventListener("click", function (event) {
     event.preventDefault();
     if (Number(numberAdults.value) > 1) {
-    numberAdults.value = Number(numberAdults.value) - 1;
-  }
+      numberAdults.value = Number(numberAdults.value) - 1;
+    }
   });
 };
 
@@ -132,6 +132,6 @@ if (minusKids) {
     event.preventDefault();
     if (Number(numberKids.value) > 0) {
       numberKids.value = Number(numberKids.value) - 1;
-  }
+    }
   });
 };
